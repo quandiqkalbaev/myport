@@ -1,0 +1,21 @@
+.intro {
+  height: var(--fullScreen);
+  // .intro__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  // .intro__title
+
+  &__title {
+    font-size: 12.8rem;
+    line-height: 130%;
+    &:nth-child(even) {
+      margin-left: auto;
+    }
+  }
+}
