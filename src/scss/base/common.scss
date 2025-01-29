@@ -2,31 +2,56 @@
 
 html.lenis,
 html.lenis body {
-    height: auto;
+  height: auto;
 }
 
 .lenis.lenis-smooth {
-    scroll-behavior: auto !important;
+  scroll-behavior: auto !important;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
-    overflow-y: scroll;
+  overscroll-behavior: contain;
+  overflow-y: scroll;
 }
 .lenis [data-lenis-prevent] {
-    overscroll-behavior: contain;
-    overflow-y: scroll;
+  overscroll-behavior: contain;
+  overflow-y: scroll;
 }
 
 .lenis.lenis-stopped {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .lenis.lenis-scrolling iframe {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 body {
-    background-color: black;
+  background-color: black;
 }
-
+.bg {
+  height: 100lvh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -10;
+  animation-name: bg_amp;
+  animation-duration: 0.65s;
+  animation-delay: 0.4s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  opacity: 0;
+  @keyframes bg_amp {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      color: #fff;
+    }
+  }
+}

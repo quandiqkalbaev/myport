@@ -3,6 +3,7 @@ import { plugins } from "./components/plugins.js";
 import { lenis } from "./components/lenis.js"
 import { intro } from "./sections/intro.js";
 import { validationPhoneInput } from "./components/validation-phone-input.js";
+import { VantaFog } from "./common/vantaFog.js";
 
 window.addEventListener("onbeforeunload", function () {
     window.scrollTo(0, 0);
@@ -21,6 +22,7 @@ window.addEventListener("load", () => {
 
     validationPhoneInput()
     intro()
+    VantaFog()
 
     // Zoom Site Disabled
     document.addEventListener('gesturestart', function (e) {
