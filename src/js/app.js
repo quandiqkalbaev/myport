@@ -4,6 +4,7 @@ import { lenis } from "./components/lenis.js"
 import { intro } from "./sections/intro.js";
 import { validationPhoneInput } from "./components/validation-phone-input.js";
 import { VantaFog } from "./common/vantaFog.js";
+import projects from "./sections/projects.js";
 
 window.addEventListener("onbeforeunload", function () {
     window.scrollTo(0, 0);
@@ -22,6 +23,7 @@ window.addEventListener("load", () => {
 
     validationPhoneInput()
     intro()
+    projects()
     VantaFog()
 
     // Zoom Site Disabled
