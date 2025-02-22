@@ -1,0 +1,158 @@
+.about {
+  // .about__container
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // .about__left
+
+  &__left {
+  }
+
+  // .about__title
+
+  &__title {
+    font-size: 6.4rem;
+  }
+
+  // .about__text
+
+  &__text {
+    margin-top: 2rem;
+    font-size: 2rem;
+    line-height: 130%;
+  }
+
+  // .about__location
+
+  &__location {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    img {
+      width: 2.4rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  // .about__pos
+
+  &__pos {
+    margin-top: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    img {
+      width: 2.4rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  // .about__socials
+
+  &__socials {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  // .about__social
+
+  &__social {
+    width: 2.4rem;
+    svg{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // .about__right
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  // .about__skills
+
+  &__skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem 4rem;
+    width: max-content;
+    justify-items: center;
+  }
+
+  // .about__skill
+
+  &__skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 7.5rem;
+    gap: 1rem;
+    transition: all 300ms ease-in-out;
+    &:nth-child(5) {
+      grid-column: 2;
+      transform: translateX(-75%);
+    }
+    &:nth-child(6) {
+      grid-column: 3;
+      transform: translateX(-75%);
+    }
+    &:nth-child(7) {
+      grid-column: 4;
+      transform: translateX(-75%);
+    }
+
+    p {
+      font-size: 2rem;
+      text-align: center;
+      transition: all 400ms ease-in-out;
+    }
+    img{
+      width: 100%;
+    }
+    @media (hover: hover) {
+      &:has(~ &:hover) {
+        filter: grayscale(100%);
+      }
+
+      &:hover {
+        filter: grayscale(0%);
+        img,
+        p {
+          transform: scale(1.2);
+        }
+      }
+
+      &:hover ~ & {
+        filter: grayscale(100%);
+      }
+    }
+  }
+
+  // .about__skill-wrapper
+
+  &__skill-wrapper {
+    width: 100%;
+    height: 7.5rem;
+    padding: 0.5rem;
+    transition: all 400ms ease-in-out;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: all 400ms ease-in-out;
+    }
+  }
+}

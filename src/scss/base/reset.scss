@@ -121,3 +121,7 @@ select:-webkit-autofill:focus {
   -webkit-background-clip: text !important;
   background-clip: text !important;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

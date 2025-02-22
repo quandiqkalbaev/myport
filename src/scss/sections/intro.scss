@@ -1,12 +1,13 @@
 .intro {
-  height: var(--fullScreen);
-  // .intro__container
+  height: 100vh;
 
+  // .intro__container
   &__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    padding-bottom: calc(100vh - var(--fullScreen));
   }
 
   // .intro__title
