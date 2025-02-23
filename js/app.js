@@ -9728,7 +9728,6 @@ window.addEventListener("unload", function () {
   gsap.to(window, { duration: 0, scrollTo: 0 });
 });
 
-
 window.addEventListener("DOMContentLoaded", () => {
   (async function loading() {
     const mediaElements = gsap.utils.toArray("[data-img]");
@@ -9756,9 +9755,11 @@ window.addEventListener("DOMContentLoaded", () => {
           headerBlock.classList.add("active");
         }, 600);
         setTimeout(() => {
-          lenisScroll.start();
+          if (queryMatches(769, "min")) {
+            lenisScroll.start();
+          }
         }, 2000);
-        header()
+        header();
         intro();
         about();
         projects();
