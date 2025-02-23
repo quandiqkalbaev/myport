@@ -3,6 +3,11 @@
   position: fixed;
   top: 0;
   z-index: 2;
+  transform: translateY(-100%);
+  transition: all 400ms linear 1200ms ;
+  &.active {
+    transform: translateY(0);
+  }
   // .header__container
 
   &__container {

@@ -14,9 +14,20 @@
 
   // .projects__headeing
 
-  &__heading{
+  &__heading {
     font-size: 6.4rem;
     text-align: center;
+    transform: translateY(25rem);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 400ms ease-in-out;
+    &.active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
   }
 
   // .projects__list
@@ -35,9 +46,10 @@
     top: calc(100vh - var(--fullScreen));
     height: var(--fullScreen);
     width: 100%;
+    pointer-events: none;
   }
   &__anchor {
-    height:100vh;
+    height: 100vh;
   }
 
   // .projects__item
@@ -163,7 +175,6 @@
     right: 0rem;
     width: 100rem;
     height: 100rem;
-    z-index: -1;
     transition: all 400ms ease-in-out;
     img {
       object-fit: contain;
