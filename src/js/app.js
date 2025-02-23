@@ -1,4 +1,3 @@
-
 import { plugins } from "./components/plugins.js";
 import { lenis } from "./components/lenis.js";
 import { intro } from "./sections/intro.js";
@@ -6,6 +5,7 @@ import { VantaFog } from "./common/vantaFog.js";
 import projects from "./sections/projects.js";
 import about from "./sections/about.js";
 import { header } from "./components/header.js";
+import { queryMatches } from "./components/utils.js";
 
 plugins();
 lenis();
@@ -18,7 +18,6 @@ window.addEventListener("unload", function () {
   window.scrollTo(0, 0);
   gsap.to(window, { duration: 0, scrollTo: 0 });
 });
-
 
 window.addEventListener("DOMContentLoaded", () => {
   (async function loading() {
@@ -47,9 +46,11 @@ window.addEventListener("DOMContentLoaded", () => {
           headerBlock.classList.add("active");
         }, 600);
         setTimeout(() => {
-          lenisScroll.start();
+          if (queryMatches(769, "min")) {
+            lenisScroll.start();
+          }
         }, 2000);
-        header()
+        header();
         intro();
         about();
         projects();
