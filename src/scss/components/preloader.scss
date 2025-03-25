@@ -1,6 +1,6 @@
 .preloader {
   position: fixed;
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   background-color: black;
   z-index: 9;
@@ -23,6 +23,13 @@
     border-top-color: #ffffff;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
+    @media (max-width: 768px) {
+      width: 200px;
+      height: 200px;
+      margin: -100px 0 0 -100px;
+      border: 3px solid transparent;
+      border-top-color: #ffffff;
+    }
   }
   #loader:before {
     content: "";
@@ -36,6 +43,14 @@
     border-top-color: #ffffff;
     -webkit-animation: spin 3s linear infinite;
     animation: spin 3s linear infinite;
+    @media (max-width: 768px) {
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border: 3px solid transparent;
+      border-top-color: #ffffff;
+    }
   }
   #loader:after {
     content: "";
@@ -49,6 +64,14 @@
     border-top-color: #ffffff;
     -webkit-animation: spin 1.5s linear infinite;
     animation: spin 1.5s linear infinite;
+    @media (max-width: 768px) {
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border: 3px solid transparent;
+      border-top-color: #ffffff;
+    }
   }
   @-webkit-keyframes spin {
     0% {
@@ -80,5 +103,8 @@
     top: 50%;
     transform: translate(-50%, -50%);
     font-size: 4rem;
+    @media (max-width: 768px) {
+      font-size: 40px;
+    }
   }
 }
