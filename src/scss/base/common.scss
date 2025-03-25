@@ -62,7 +62,9 @@ body {
   padding: 0 3rem;
   margin: 0 auto;
   @media (max-width:768px) {
-    padding: 0;
+    padding: 15px;
+    max-width: 100%;
+    
   }
 }
 .mobile {
