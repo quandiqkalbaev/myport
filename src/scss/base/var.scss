@@ -7,7 +7,10 @@
   --dark-color: #000;
   --orange-color: #f37c57;
   --grey-color: #757575;
-  
+
   //heights
   --fullScreen: calc(100lvh - 5.4rem);
+  @media (max-width: 768px) {
+    --fullScreen: calc(100lvh - 50px);
+  }
 }
