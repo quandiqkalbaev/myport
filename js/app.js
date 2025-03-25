@@ -9755,9 +9755,9 @@ window.addEventListener("DOMContentLoaded", () => {
           headerBlock.classList.add("active");
         }, 600);
         setTimeout(() => {
-          if (queryMatches(769, "min")) {
+          // if (queryMatches(769, "min")) {
             lenisScroll.start();
-          }
+          // }
         }, 2000);
         header();
         intro();
