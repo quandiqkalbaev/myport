@@ -4107,6 +4107,7 @@ body {
   }
 
   .projects__tools {
+    overflow: scroll;
     margin-top: 20px;
     gap: 15px;
   }
