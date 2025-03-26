@@ -4154,6 +4154,24 @@ body {
   }
 }
 
+@media (max-width: 390px) {
+  .about__skills {
+    gap: 20px 35px;
+  }
+
+  .about__skill {
+    width: 40px;
+  }
+
+  .about__skill p {
+    font-size: 14px;
+  }
+
+  .about__skill-wrapper {
+    height: 40px;
+  }
+}
+
 @media (hover: hover) {
   .f-button:hover:not([disabled]) {
     color: var(--f-button-hover-color);
