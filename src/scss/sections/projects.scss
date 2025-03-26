@@ -146,6 +146,7 @@
     pointer-events: none;
     transition: all 400ms ease-in-out;
     @media (max-width: 768px) {
+      overflow: scroll;
       margin-top: 20px;
       gap: 15px;
     }
